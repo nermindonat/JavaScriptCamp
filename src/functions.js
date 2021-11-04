@@ -93,9 +93,9 @@ let [icAnadolu, marmara, karadeniz, [icAnadoluSehirleri]] = [
 // console.log(icAnadolu.population);
 console.log(icAnadoluSehirleri);
 
-let newPrıductName, newUnitPrice, newQuantity;
+let newProductName, newUnitPrice, newQuantity;
 ({
-  productName: newPrıductName,
+  productName: newProductName,
   unitPrice: newUnitPrice,
   quantity: newQuantity,
 } = { productName: "Elma", unitPrice: 10, quantity: 5 });

@@ -1,16 +1,19 @@
 // export dışardan import edilebileceği anlamına geliyor.
 export default  class UserService{
+    constructor(){
+        this.users= []
+    }
 
-    add(){
-        console.log("Kullanıcı eklendi.")
+    add(user){
+        this.users.push(user)
     }
 
     list(){
-        console.log("Kullanıcılar listelendi.")
+        return this.users
     }
 
     // getById : User ı id ye göre getirme.
     getById(id){
-        console.log("Kullanıcı detayı getirildi.")
+        return this.users.find(u=>u.id===id)
     }
 }

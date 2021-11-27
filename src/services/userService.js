@@ -15,6 +15,6 @@ export default  class UserService{
     // getById : User ı id ye göre getirme.
     getById(id){
         return this.users.find(u=>u.id===id)
-        //return this.users.find(u=>u.id===id)
+        
     }
 }

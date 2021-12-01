@@ -17,6 +17,7 @@ addToCart(cart);
 console.log(cart);
 
 let sayi = 10;
+let sayi2 = 20;
 
 function sayiTopla(number) {
   number += 1;

@@ -1,17 +1,21 @@
+import { BaseLogger, ElasticLogger, MongoLogger } from "../crossCuttingConcerns/logging/logger.js"
 import User from "../models/user.js"
 import UserService from "../services/userService.js"  // services klasöründeki userService kullanacam. iki nokta da bulunduğum klasörün bi üstüne git demek
 
 console.log("User component yüklendi")
 
-let userService = new UserService()
+let logger1 = new MongoLogger()
+let userService = new UserService(logger1)
 
 let user1= new User(1,"Nermin","Donat","Muğla");
+let user2= new User(2,"Zana","Donat","Muğla");
 
-userService.add(user1.firstName)
+userService.add(user1)
+userService.add(user2)
 
+console.log(userService.list())
+console.log(userService.getById(2))
 
-userService.getById(1)
-userService.list()
 
 
 let customer = {id:1, firstName:"Nermin"}

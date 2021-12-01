@@ -1,11 +1,13 @@
 // export dışardan import edilebileceği anlamına geliyor.
 export default  class UserService{
-    constructor(){
+    constructor(loggerService){
         this.users= []
+        this.loggerservice=loggerService
     }
 
     add(user){
         this.users.push(user)
+        this.loggerservice.log(user)
     }
 
     list(){

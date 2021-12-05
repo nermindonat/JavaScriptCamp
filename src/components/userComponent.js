@@ -16,11 +16,15 @@ userService.add(user2)
 console.log(userService.list())
 console.log(userService.getById(2))
 
-
-
 let customer = {id:1, firstName:"Nermin"}
 
 //prototyping : sonradan bir değer eklenebilir.
 customer.lastName = "Donat"
 
 console.log(customer.lastName)
+
+console.log("-----------------")
+userService.load()
+console.log(userService.customers)
+console.log(userService.employees)
+console.log(userService.errors)

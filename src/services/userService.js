@@ -86,28 +86,4 @@ export default class UserService {
         this.loggerservice.log(user)
     }
 
-    listCustomers() {
-        return this.customers
-    }
-
-    // getById : User ı id ye göre getirme.
-    getCustomersById(id) {
-        return this.customers.find(u=>u.id===id)
-
-    }
-
-    getCustomersSorted(){ // Sıralama
-        return this.customers.sort((customer1,customer2)=>{
-            if (customer1.firstName>customer2.firstName) {
-                return 1;
-            }
-            else if (customer1.firstName===customer2.firstName) {
-                return 0;               
-            }
-            else{
-                return -1;
-            }
-        })
-
-    }
 }
